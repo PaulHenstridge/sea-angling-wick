@@ -24,7 +24,7 @@ myOAuth2Client.setCredentials({
 const myAccessToken = myOAuth2Client.getAccessToken()
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/contact.html')
+    res.sendFile(__dirname + '/public/index.html')
 })
 
 app.post('/', (req, res) => {
@@ -35,7 +35,6 @@ app.post('/', (req, res) => {
         auth: {
             type: 'OAuth2',
             user:'sea.angling.wick@gmail.com',
-            pass: 'password for that email',
             clientId: '628785676412-mm0fshqctqipojjr8laq423246efeubb.apps.googleusercontent.com',
             clientSecret:'V2oWaDkVGCEAw1C_3Y50Yf-5',
             refreshToken:'1//04k8PT_KVSsjYCgYIARAAGAQSNwF-L9IrqlMq8t-lF9I4Jx41QUPn75n5a6yTTksPeCD2u3dWGpvAwkOTzlysWXCkr3dZ3EIpxYg',
@@ -46,8 +45,10 @@ app.post('/', (req, res) => {
     const mailOptions = {
         from : req.body.email,
         to: 'sea.angling.wick@gmail.com', // add email here
-        subject: 'an enquiry from the website!',
-        text: `Message from ${req.body.name}.
+        subject: 'Enquiry from the website!',
+        text: `Message from ${req.body.name}
+    Return email address: ${req.body.email}
+
                 ***************
             ${req.body.message}`
     }
