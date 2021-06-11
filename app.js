@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     console.log('req.body:', req.body)
 
-    const transporter = nodemailer.createTransport({  // details to be added
+    const transporter = nodemailer.createTransport({  
         service: 'gmail',  
         auth: {
             type: 'OAuth2',
@@ -44,7 +44,7 @@ app.post('/', (req, res) => {
 
     const mailOptions = {
         from : req.body.email,
-        to: 'sea.angling.wick@gmail.com', // add email here
+        to: 'sea.angling.wick@gmail.com', 
         subject: 'Enquiry from the website!',
         text: `Message from ${req.body.name}
     Return email address: ${req.body.email}

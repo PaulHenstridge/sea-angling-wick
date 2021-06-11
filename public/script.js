@@ -34,7 +34,7 @@ function removeActive () {
 about.addEventListener('click', () => {
     dropdown.classList.remove('dropdown-hidden')
     dropdown.innerHTML = ` 
-    <p>The Cheryl Ann was launched in August of 2014.  Here is a video of the launch (you can skip directoy to 4:25 if you just want to see dolphins!) </p> 
+    <p>The Cheryl Ann was launched in August of 2014.  Here is a video of the launch (you can skip to 4:25 if you just want to see dolphins!) </p> 
     <iframe width="300" height="145" src="https://www.youtube.com/embed/94v6E1aWWVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      <button class="close-dropdown">close</button>`
     closeDrop()
@@ -44,9 +44,9 @@ about.addEventListener('click', () => {
 prices.addEventListener('click', () => {
     dropdown.classList.remove('dropdown-hidden')
     dropdown.innerHTML = ` <h3> prices and options .........</h3> 
-    <p> 3 hour trip........ ££5000
-    6 houre trip ..........£9000
-    champagne ............£900
+    <p> 3 hour trip........ ££5000/
+    6 hour trip ..........£9000/
+    champagne ............£900/
     Lobster.............50p
      </p> 
      <button class="close-dropdown">close</button>`
